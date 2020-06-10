@@ -7,5 +7,13 @@ body {
     height: 100%;
     background: #303030;
     font-family: roboto;
-    color: white;
+    color: rgba(251, 230, 230, 0.85);
+}
+.container {
+    margin: 20px;
+    display: flex;
+
+    .mat-list .mat-list-item {
+        color: rgba(251, 230, 230, 0.85);
+    }
 }
