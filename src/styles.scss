@@ -1,19 +1,32 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+html {
+    height: 100%;
+}
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
     background: #303030;
     font-family: roboto;
-    color: rgba(251, 230, 230, 0.85);
+    color: rgba(255, 254, 254, 0.74);
 }
 .container {
     margin: 20px;
     display: flex;
 
+    .header {
+        h3 {
+            margin-left: 1.1rem;
+        }
+        hr {
+            margin-left: .6rem;
+            width: 100%;
+        }
+    }
     .mat-list .mat-list-item {
-        color: rgba(251, 230, 230, 0.85);
+        color: rgba(255, 254, 254, 0.74);
     }
 }
