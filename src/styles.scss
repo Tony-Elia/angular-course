@@ -1,4 +1,4 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 html {
     height: 100%;
@@ -26,7 +26,15 @@ body {
             width: 100%;
         }
     }
-    .mat-list .mat-list-item {
-        color: rgba(255, 254, 254, 0.74);
+    mat-card{
+        border-radius: 10px;
+        mat-card-title {
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 }
