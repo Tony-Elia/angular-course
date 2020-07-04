@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
-import { DISHES } from '../shared/dishes';
+import { DishService } from '../services/dish.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,27 +10,18 @@ import { DISHES } from '../shared/dishes';
 
 export class MenuComponent implements OnInit {
 
-  dishes: Dish[] = DISHES;
+  dishes: Dish[];
 
-  selectedDish: Dish;
+  selectedDish: Dish[];
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit() {
-  }
-  
-  hack(val) {
-    console.log('Before:');
-    console.log(val);
-    var commentArray = Array.from(val);
-    console.log('After:');
-    console.log(val);
-    return commentArray;
+     this.dishes = this.dishService.getDishes();
   }
 
-  onSelect(dish: Dish) {
+  onSelect(dish: Dish[]) {
     this.selectedDish = dish;
-    this.hack(dish.comments)
   }
 
 }
