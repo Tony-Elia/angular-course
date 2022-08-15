@@ -1,8 +1,30 @@
 @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
 
 html {
     height: 100%;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555555;
+    transition: .2s;
+    &:hover {
+        background: #c2185b;
+    }
+  }
+
 body {
     overflow-x: hidden;
     margin: 0;
@@ -12,6 +34,10 @@ body {
     background: #303030;
     font-family: roboto;
     color: rgba(255, 254, 254, 0.74);
+}
+
+.mat-toolbar {
+    background-color: #173786!important;
 }
 .container {
     margin: 20px;
@@ -33,6 +59,9 @@ body {
                 width: 100%;
             }
         }
+    }
+    mat-grid-tile {
+        cursor: pointer;
     }
     mat-card{
         border-radius: 10px;
